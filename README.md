@@ -1,6 +1,7 @@
 # Data Warehouse and Analytics Project
-Welcome to the Data Warehouse and Analytics Project repository! 🚀
-This project builds a modern data warehouse with SQL Server, including ETL processes, data modeling, and analytics to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+Welcome to the Data Warehouse and Analytics Project repository! 🚀  
+This project builds a modern data warehouse with SQL Server, including ETL processes, data modeling, and analytics to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.  
+
 This project follows the masterclass of 'Data with Baraa' on Youtube : [SQL Data Warehouse from Scratch | Full Hands-On Data Engineering Project](https://www.youtube.com/watch?v=9GVqKuTVANE).
 
 ---
@@ -25,6 +26,8 @@ I'm eager to leverage my skills in data structuring, analysis, and value creatio
 N'ai-je donc tant vécu que pour ne pas avoir ce KPI  
 Et ne suis-je blanchi dans tous ces rapports clairs  
 Que pour voir en un jour flétrir tant d'OKRs ?*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matthew-rives/)
 
 ---
 
