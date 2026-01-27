@@ -1,0 +1,1 @@
+![[img_bronze_layer_steps.png]]
