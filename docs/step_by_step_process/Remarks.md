@@ -19,3 +19,10 @@ Instead, we could do :
 4. Execute Silver DDL script to create Silver tables
 5. Create the Silver insert
 6. Execute Silver insert
+
+
+
+
+--- 
+What to do when :
+- sales table has some customer IDs that do not exists in the customer table? 
