@@ -1,4 +1,4 @@
-Separation of concern
+# Separation of concern
 
 
 ![[img_soc_without.png]]

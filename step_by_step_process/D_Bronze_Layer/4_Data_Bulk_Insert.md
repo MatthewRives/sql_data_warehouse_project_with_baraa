@@ -1,10 +1,12 @@
+# Data Bulk Insert
+## Principles
 Transfer a large amount of data from files to a DB
 
 ![[img_database_insert_vs_bulk.png]]
 
 ```
 BULK INSERT bronze.crm_cust_info
-FROM 'H:\TRAINING\DATA_ANALYST\SQL_DATA_WAREHOUSE_FROM_SCRATCH_WITH_BARAA\sql_data_warehouse_project_with_baraa\datasets\source_crm\cust_info.csv'
+FROM '(csv file path on your computer)'
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
@@ -40,7 +42,7 @@ Any change in the source file will be loaded in the table.
 ```
 TRUNCATE TABLE bronze.crm_cust_info
 BULK INSERT bronze.crm_cust_info
-FROM 'H:\TRAINING\DATA_ANALYST\SQL_DATA_WAREHOUSE_FROM_SCRATCH_WITH_BARAA\sql_data_warehouse_project_with_baraa\datasets\source_crm\cust_info.csv'
+FROM '(csv file path on your computer)'
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',

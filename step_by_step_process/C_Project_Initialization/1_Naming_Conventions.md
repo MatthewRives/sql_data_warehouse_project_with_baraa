@@ -1,16 +1,11 @@
-![[img_naming_conventions.png]]Naming conventions : snake_case
-Language : use English for all names
-Avoid Reserved Words: Do not use SQL reserved words as object names
+# Naming conventions
 
-
-## **Naming Conventions**
+![[img_naming_conventions.png]]
 
 
 This document outlines the naming conventions used for schemas, tables, views, columns, and other objects in the data warehouse.
 
 ## **General Principles**
-
-
 
 - **Naming Conventions**: Use snake_case, with lowercase letters and underscores (`_`) to separate words.
 - **Language**: Use English for all names.

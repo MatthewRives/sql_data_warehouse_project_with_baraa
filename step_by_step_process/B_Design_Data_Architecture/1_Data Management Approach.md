@@ -1,8 +1,11 @@
+# Data Management Approach
+
 ![[img_data_architecture_overview.png]]
 
 Data Warehouse
 Data Lake
 Data Lakehouse
+Data Mesh
 ![[img_data_architecture.png]]
 
 Data Warehouse : 

@@ -27,11 +27,13 @@
 
 ## Build Silver Layer
 
-- [ ] Analyzing: Explore & understand Data
-- [ ] Coding: Data cleansing
-- [ ] Validating: Data Correctness Checks
-- [ ] Documenting & Versioning in GIT
-- [ ] Commit Code in Git Repo
+- [x] Analyzing: Explore & understand Data
+- [x] Document: Draw Data Integration
+- [x] Coding: Data cleansing
+- [x] Validating: Data Correctness Checks
+- [x] Quality checks for Silver
+- [x] Document: draw data flow
+- [x] Commit Code in Git Repo
 
 ## Build Gold Layer
 

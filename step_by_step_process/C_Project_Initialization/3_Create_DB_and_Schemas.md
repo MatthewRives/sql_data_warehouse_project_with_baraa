@@ -1,11 +1,24 @@
+# Create Database and Schemas
+
+## Create and start SQL server
 Install Microsoft SQL Server Express
 Start SQL Server Express
 Create SQLExpress server
 
+If needed, in the Windows search bar, search "services" > right click > run as administrator. 
+Find the SQLExpress > right click > start
+![[img_sqlexpress_server_start.png]]
+
+## Connect to SQL server
 Install Microsoft SQL Server Management Studio 22 (SSMS)
 Start SSMS and connect to the local SQL Server Express (SQLExpress)
+![[img_start_server_with_ssms.png]]
+
+
+## Create Database
+
 Copy and execute the following code
-Update git with it in the script folder
+Respect naming convention
 
 ```
 /*
@@ -13,32 +26,32 @@ Update git with it in the script folder
 Create Database and Schemas
 =============================================================
 Script Purpose:
-    This script creates a new database named 'DataWarehouse' after checking if it already exists. 
-    If the database exists, it is dropped and recreated. Additionally, the script sets up three schemas 
-    within the database: 'bronze', 'silver', and 'gold'.
+    This script creates a new database named 'Baraa_DataWarehouse' after checking if it already exists. 
+    If the database exists, it is dropped and recreated. 
+    Additionally, the script sets up three schemas within the database: 'bronze', 'silver', and 'gold'.
 	
 WARNING:
-    Running this script will drop the entire 'DataWarehouse' database if it exists. 
-    All data in the database will be permanently deleted. Proceed with caution 
-    and ensure you have proper backups before running this script.
+    Running this script will drop the entire 'Baraa_DataWarehouse' database if it exists. 
+    All data in the database will be permanently deleted. 
+    Proceed with caution and ensure you have proper backups before running this script.
 */
 
 USE master;
 GO
 
--- Drop and recreate the 'DataWarehouse' database
-IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
+-- Drop and recreate the 'Baraa_DataWarehouse' database
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'Baraa_DataWarehouse')
 BEGIN
-    ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    DROP DATABASE DataWarehouse;
+    ALTER DATABASE Baraa_DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE Baraa_DataWarehouse;
 END;
 GO
 
--- Create the 'DataWarehouse' database
-CREATE DATABASE DataWarehouse;
+-- Create the 'Baraa_DataWarehouse' database
+CREATE DATABASE Baraa_DataWarehouse;
 GO
 
-USE DataWarehouse;
+USE Baraa_DataWarehouse;
 GO
 
 -- Create Schemas
@@ -51,3 +64,6 @@ GO
 CREATE SCHEMA gold;
 GO
 ```
+
+## Push to git
+Update git with it in the script folder 
