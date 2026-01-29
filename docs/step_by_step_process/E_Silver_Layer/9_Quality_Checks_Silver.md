@@ -1,3 +1,5 @@
+# Quality checks : Silver
+
 In the repository, in tests folder, create a new sql file : quality_checks_silver.sql
 
 ```

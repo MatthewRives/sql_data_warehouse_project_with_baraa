@@ -1,4 +1,4 @@
-# Quality Check
+# Quality Check : Gold
 
 ```
 /*

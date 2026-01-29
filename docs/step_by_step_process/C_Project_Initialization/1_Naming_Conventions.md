@@ -1,6 +1,6 @@
 # Naming conventions
 
-![[img_naming_conventions.png]]
+![img_naming_conventions.png](../../../_img/img_naming_conventions.png)
 
 
 This document outlines the naming conventions used for schemas, tables, views, columns, and other objects in the data warehouse.

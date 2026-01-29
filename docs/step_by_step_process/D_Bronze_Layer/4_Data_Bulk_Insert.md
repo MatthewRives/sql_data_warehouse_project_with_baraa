@@ -2,7 +2,7 @@
 ## Principles
 Transfer a large amount of data from files to a DB
 
-![[img_database_insert_vs_bulk.png]]
+![img_database_insert_vs_bulk.png](../../../_img/img_database_insert_vs_bulk.png)
 
 ```
 BULK INSERT bronze.crm_cust_info

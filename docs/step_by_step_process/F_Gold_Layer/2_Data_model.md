@@ -1,14 +1,14 @@
 # Data model
 
-![[img_data_model_schema_choice.png]]
+![img_data_model_schema_choice.png](../../../_img/img_data_model_schema_choice.png)
 
 ## 3 stages for data models
 
-![[img_data_model_schema_choice.png]]
+![img_data_model_schema_choice.png](../../../_img/img_data_model_schema_choice.png)
 
 ## Schema
 
-![[img_data_model_star_vs_snowflake_schema.png]]
+![img_data_model_star_vs_snowflake_schema.png](../../../_img/img_data_model_star_vs_snowflake_schema.png)
 ### Star Schema
 A fact table surrounded by DIM tables
 Simple & Easy

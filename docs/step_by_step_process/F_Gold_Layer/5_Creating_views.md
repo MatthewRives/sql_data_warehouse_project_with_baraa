@@ -64,7 +64,7 @@ Results : no duplicates
 ### Gender column
 From the merge, we have 2 cols with gender data 
 
-![[img_gold_gender_double_cols.png]]
+![img_gold_gender_double_cols.png](../../../_img/img_gold_gender_double_cols.png)
 
 We perform data integration. 
 
@@ -84,7 +84,7 @@ ORDER BY
 	1,2
 ```
 
-![[img_gold_gender_double_cols_check.png]]
+![img_gold_gender_double_cols_check.png](../../../_img/img_gold_gender_double_cols_check.png)
 
 Good : 
 - Female = Female
@@ -122,7 +122,7 @@ ORDER BY
 	1,2
 ```
 
-![[img_gold_gender_double_cols_new_gen.png]]
+![img_gold_gender_double_cols_new_gen.png](../../../_img/img_gold_gender_double_cols_new_gen.png)
 
 ### Data Integration : gender
 ```
@@ -245,7 +245,7 @@ The tables contains historical data as well as current data.
 We will keep the current information as specified in the requirements. It's the default approach. 
 
 
-![[img_gold_dim_product_primary_key_filter.png]]
+![img_gold_dim_product_primary_key_filter.png](../../../_img/img_gold_dim_product_primary_key_filter.png)
 3 records for the same products. 2 with end date, one with null. The null is the current information.  
 
 

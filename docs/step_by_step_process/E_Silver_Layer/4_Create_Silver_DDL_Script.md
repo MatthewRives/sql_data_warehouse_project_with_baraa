@@ -1,6 +1,6 @@
 # Creating Silver Tables
 
-![[img_silver_empty_silver_tables.png]]
+![img_silver_empty_silver_tables.png](../../../_img/img_silver_empty_silver_tables.png)
 
 ## Load data
 Far easier than the bronze layer, because nothing change between 

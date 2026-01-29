@@ -7,12 +7,12 @@ Create SQLExpress server
 
 If needed, in the Windows search bar, search "services" > right click > run as administrator. 
 Find the SQLExpress > right click > start
-![[img_sqlexpress_server_start.png]]
+![img_sqlexpress_server_start.png](../../../_img/img_sqlexpress_server_start.png)
 
 ## Connect to SQL server
 Install Microsoft SQL Server Management Studio 22 (SSMS)
 Start SSMS and connect to the local SQL Server Express (SQLExpress)
-![[img_start_server_with_ssms.png]]
+![img_start_server_with_ssms.png](../../../_img/img_start_server_with_ssms.png)
 
 
 ## Create Database

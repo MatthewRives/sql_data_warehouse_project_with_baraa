@@ -1,17 +1,17 @@
 # Separation of concern
 
 
-![img_soc_without](img_soc_without.png)
+![img_soc_without](../../../_img/img_soc_without.png)
 
 Transform complex structure in smaller independent parts
 Each part is responsible for a specific task
 The component of the architecture must not be duplicated (2 parts cannot do the same things)
 
-![img_soc_with](img_soc_with.png)
+![img_soc_with](../../../_img/img_soc_with.png)
 
 
 SOC with Medaillon apprioach
-![img_soc_with_medaillon_approach](img_soc_with_medaillon_approach.png)
+![img_soc_with_medaillon_approach](../../../_img/img_soc_with_medaillon_approach.png)
 
 Bronze tasks cannot be done in silver
 Silver cannot be done in Gold

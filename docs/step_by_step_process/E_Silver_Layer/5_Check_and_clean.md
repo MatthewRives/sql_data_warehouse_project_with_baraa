@@ -22,7 +22,7 @@ GROUP BY cst_id
 HAVING COUNT(*) > 1 OR cst_id IS NULL;
 ```
 
-![[img_silver_clean_primary_key.png]]
+![img_silver_clean_primary_key.png](../../../_img/img_silver_clean_primary_key.png)
 
 For something more complete:
 
@@ -43,7 +43,7 @@ HAVING COUNT(*) > 1 OR cst_id IS NULL
 ORDER BY nb_occurrences DESC;
 ```
 
-![[img_silver_clean_find_missing_or_duplicates.png]]
+![img_silver_clean_find_missing_or_duplicates.png](../../../_img/img_silver_clean_find_missing_or_duplicates.png)
 
 #### Investigate duplicates
 
@@ -52,7 +52,7 @@ Find what is wrong and how we could correct it
 The best is to have timestamp to help us. 
 For 29466, the most recent record is the one to keep because it has the most fresh information. 
 
-![[img_silver_clean_primarykey_investigate.png]]
+![img_silver_clean_primarykey_investigate.png](../../../_img/img_silver_clean_primarykey_investigate.png)
 
 
 #### Cleaning
@@ -83,7 +83,7 @@ WHERE cst_firstname != TRIM(cst_firstname)
 ```
 
 
-![[img_silver_clean_unwanted_spaces.png]]
+![img_silver_clean_unwanted_spaces.png](../../../_img/img_silver_clean_unwanted_spaces.png)
 
 #### Clean
 
@@ -102,7 +102,7 @@ FROM bronze.crm_cust_info
 ### 3. Consistency of low cardinality columns
 Columns with a limited number of possible values
 
-![[img_silver_clean_consistency_low_cardinality.png]]
+![img_silver_clean_consistency_low_cardinality.png](../../../_img/img_silver_clean_consistency_low_cardinality.png)
 
 #### For gender 
 ##### Check
@@ -148,7 +148,7 @@ FROM bronze.crm_cust_info
 
 #### Results
 
-![[img_silver_clean_gender_marital.png]]
+![img_silver_clean_gender_marital.png](../../../_img/img_silver_clean_gender_marital.png)
 
 ## Date
 
@@ -181,9 +181,9 @@ Results : no problem
 #### Category id
 ##### Investigate
 In the bronze.erp_px_cat_g1v2, we saw the column 'id' with values like 'CO_BR'
-![[img_silver_clean_prd_key_in_erp_px_cat_g1v2.png]]
+![img_silver_clean_prd_key_in_erp_px_cat_g1v2.png](../../../_img/img_silver_clean_prd_key_in_erp_px_cat_g1v2.png)
 It matches the first characters of prd_key in crm prd info
-![[img_silver_clean_crm_prd_info_key.png]]
+![img_silver_clean_crm_prd_info_key.png](../../../_img/img_silver_clean_crm_prd_info_key.png)
 
 ##### Clean 
 ```
@@ -215,13 +215,13 @@ WHERE
 ```
 
 These keys are in crm prd info but not in erp px cat g1v2
-![[img_silver_clean_prd_cat_id.png]]
+![img_silver_clean_prd_cat_id.png](../../../_img/img_silver_clean_prd_cat_id.png)
 
 #### Product key
 ##### Investigate
 In erp sales details, col sls prd key
 
-![[img_silver_clean_prd_key_in_erp_sales_details.png]]
+![img_silver_clean_prd_key_in_erp_sales_details.png](../../../_img/img_silver_clean_prd_key_in_erp_sales_details.png)
 
 ##### Clean
 
@@ -338,11 +338,11 @@ FROM bronze.crm_prd_info
 WHERE prd_end_dt < prd_start_dt
 ```
 
-![[img_silver_clean_end_date_earlier_than_start_date.png]]
+![img_silver_clean_end_date_earlier_than_start_date.png](../../../_img/img_silver_clean_end_date_earlier_than_start_date.png)
 
 #### Clean
 Extract the problematic data to Excel and try different approaches to solve the problems.
-![[img_silver_clean_date_problem_extract.png]]
+![img_silver_clean_date_problem_extract.png](../../../_img/img_silver_clean_date_problem_extract.png)
 
 ##### Solution 1 : Swap end date and start date
 For prd_id, 212 to 214 included. Despite a different prd_id, the product is the same (same cat id, same prd key). Only the price changes, as well as the dates of this product-price combination. 
@@ -354,13 +354,13 @@ The end of the first history should be older than the start of the next records.
 
 **Problem 2 : we must always have a starting date.**
 In the original extract, we can have no ending date
-![[img_silver_clean_date_swap_not_working.png]]
+![img_silver_clean_date_swap_not_working.png](../../../_img/img_silver_clean_date_swap_not_working.png)
 
 
 ##### Solution 2 : 
 End date = start date of the next record -1
 
-![[img_silver_clean_date_solution_2.png]]
+![img_silver_clean_date_solution_2.png](../../../_img/img_silver_clean_date_solution_2.png)
 
 Must be confirmed with the source expert.
 
@@ -395,7 +395,7 @@ WHERE prd_end_dt < prd_start_dt
 ORDER BY prd_key, cat_id, prd_id
 ```
 
-![[img_silver_clean_date_solution_2_test.png]]
+![img_silver_clean_date_solution_2_test.png](../../../_img/img_silver_clean_date_solution_2_test.png)
 
 #### Cast
 Since the dates values have no time info (only 00:00:00:000 at the end), we can cast them to simple date.
@@ -413,7 +413,7 @@ FROM
 
 ---
 ## For crm_sales_details
-![[img_silver_clean_crm_sales_details.png]]
+![img_silver_clean_crm_sales_details.png](../../../_img/img_silver_clean_crm_sales_details.png)
 
 ### Repeat the previous steps
 #### Check for duplicates
@@ -526,14 +526,14 @@ SELECT DISTINCT
 FROM bronze.crm_sales_details
 ```
 
-![[img_silver_clean_sales_details.png]]
+![img_silver_clean_sales_details.png](../../../_img/img_silver_clean_sales_details.png)
 
 ---
 ## ERP cust az12 
 
 ### Customer key
 
-![[img_silver_clean_erp_cust_az12_cid_vs_crm_cust_info.png]]
+![img_silver_clean_erp_cust_az12_cid_vs_crm_cust_info.png](../../../_img/img_silver_clean_erp_cust_az12_cid_vs_crm_cust_info.png)
 
 Extra characters in the customer key
 For the check, the insert must have been done with silver.cust_info
@@ -564,7 +564,7 @@ FROM bronze.erp_cust_az12
 WHERE bdate < '1924-01-01' OR bdate > GETDATE()
 ```
 
-![[img_silver_clean_erp_cust_az12_bdate.png]]
+![img_silver_clean_erp_cust_az12_bdate.png](../../../_img/img_silver_clean_erp_cust_az12_bdate.png)
 
 
 #### Clean
@@ -625,7 +625,7 @@ FROM
 	bronze.erp_loc_a101
 ```
 
-![[img_silver_clean_country_distinct.png]]
+![img_silver_clean_country_distinct.png](../../../_img/img_silver_clean_country_distinct.png)
 
 
 ```
