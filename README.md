@@ -101,8 +101,8 @@ I'm eager to leverage my skills in data structuring, analysis, and value creatio
 
 *Ô rage ! ô désespoir ! ô dataset ennemi !
 N'ai-je donc tant vécu que pour ne pas avoir ce KPI
-Et ne suis-je blanchi dans tous ces rapports clairs
-Que pour voir en un jour flétrir tant d'OKRs ?*
+Et ne suis-je blanchi dans tous ces rapports clairs  
+Que pour voir en un jour flétrir tant d'OKRs ?* 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matthew-rives/)
 
